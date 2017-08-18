@@ -1,0 +1,6 @@
+/* custom css */
+.error-messages.message div {
+    font-weight: bold;
+    font-size: 12px;
+    color: #ce0000;
+}

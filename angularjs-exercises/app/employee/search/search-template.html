@@ -1,0 +1,53 @@
+<div class="content-heading">
+    Search Employee
+</div>
+<div class="search" style="display: flex; flex-direction: row; align-items: center;">
+    <span style="position: absolute;margin-left: 15px;"><i class="fa fa-search"></i></span>
+    <input type="text" data-ng-model="query" placeholder="type anything to search" class="form-control form-control-rounded" style="border-radius: 10px;margin: 20px 0px;width: 500px;height: 50px;padding-left: 40px;">
+    <button style="margin-left: 15px;" ng-click="search()" class="btn btn-primary">Search</button>
+</div>
+<div class="" data-ng-init="findAll()">
+    <div class="panel panel-default">
+        <div class="panel-heading">Search Result</div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th width="10px"></th>
+                            <th>ID</th>
+                            <th>Given Name</th>
+                            <th>Family Name</th>
+                            <th>Birthday</th>
+                            <th>Team</th>
+                            <th>Position</th>
+                            <th>Mobile</th>
+                            <th width="40px">action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr ng-repeat="emp in employees">
+                            <td>
+                                <label class="checkbox-inline c-checkbox">
+                                                    <input id="" type="checkbox" value="option1">
+                                                    <span class="fa fa-check"></span>
+                                                </label>
+                            </td>                            
+                            <td>{{emp.UserID}}</td>
+                            <td>{{emp.GivenName}}</td>
+                            <td>{{emp.FamilyName}}</td>
+                            <td>{{emp.Birthday}}</td>
+                            <td>{{emp.Team}}</td>
+                            <td>{{emp.Position}}</td>
+                            <td>{{emp.Mobile}}</td>
+                            <!--When user clicks Edit button, navigate to Edit Page (http://localhost:8000/#!/employeeEdit/{id})-->
+                            <!--When user clicks Delete button, shows Confirm window (confirm('Are you sure!');) and then delete employee if user click OK -->
+                            <td style="width: 120px"><button ng-click="edit(emp.ID)">Edit</button><button ng-click="delete(emp.ID)">Delete</button></td>
+                        </tr>    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

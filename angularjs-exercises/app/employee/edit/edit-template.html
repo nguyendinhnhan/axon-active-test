@@ -1,0 +1,136 @@
+<div class="content-heading">
+    Edit an employee: {{employee.GivenName}} {{employee.FamilyName}} 
+</div>
+<div class="" data-ng-init="find()">
+    <div class="panel panel-default">
+        <!-- <div class="panel-heading">Create edit form here</div> -->
+        <div class="panel-heading">
+        	<h3>Edit Employee</h3>
+        </div>
+        <div class="panel-body">
+           <!--Employee Edit Form-->
+            <div class="row">
+            	<form name="EmployeeEditForm" data-ng-submit="update(EmployeeEditForm.$valid)">
+	           		<div class="col-md-6">
+	           			<div class="form-group">
+	           				<label class="control-label" for="UserID">User ID</label>
+	           				<div class="controls">
+	           					<input type="text" name="UserID" class="form-control" placeholder="User ID" data-ng-model="employee.UserID">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="GivenName">Given Name</label>
+	           				<div>
+	           					<input type="text" name="GivenName" class="form-control" placeholder="Given Name" data-ng-model="employee.GivenName">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="FamilyName">Family Name</label>
+	           				<div>
+	           					<input type="text" name="FamilyName" class="form-control" placeholder="Family Name" data-ng-model="employee.FamilyName">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="Birthday">Birthday</label>
+	           				<p class="input-group">
+	           					<input type="text" name="Birthday" class="form-control" placeholder="Birthday" data-ng-model="employee.Birthday"
+	           						datetime-picker="dd/MM/yyyy" enable-time="false" save-as="ISO" is-open="isOpen" ng-click="isOpen = !isOpen" ng-model-options="{timezone: 'UTC'}">
+	           					<span class="input-group-btn">
+							        <button type="button" class="btn btn-default" ng-click="isOpen = !isOpen"><i class="fa fa-calendar"></i></button>
+							    </span>
+	           				</p>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="PlaceOfBirthday">Place Of Birthday</label>
+	           				<div>
+	           					<input type="text" name="PlaceOfBirthday" class="form-control" placeholder="Place Of Birthday" data-ng-model="employee.PlaceOfBirthday">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="Team">Team</label>
+	           				<div>
+	           					<input type="text" name="Team" class="form-control" placeholder="Team" data-ng-model="employee.Team">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="Position">Position</label>
+	           				<div>
+	           					<input type="text" name="Position" class="form-control" placeholder="Position" data-ng-model="employee.Position">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="CurrentAddress">CurrentAddress</label>
+	           				<div>
+	           					<input type="text" name="CurrentAddress" class="form-control" placeholder="CurrentAddress" data-ng-model="employee.CurrentAddress">
+	           				</div>
+	           			</div>
+	           		</div>
+
+	           		<div class="col-md-6">
+	           			<div class="form-group">
+	           				<label for="Phone">Phone</label>
+	           				<div>
+	           					<input type="text" name="Phone" class="form-control" placeholder="Phone" data-ng-model="employee.Phone">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="Mobile">Mobile</label>
+	           				<div>
+	           					<input type="text" name="Mobile" class="form-control" placeholder="Mobile" data-ng-model="employee.Mobile">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="PersonalEmail">PersonalEmail</label>
+	           				<div>
+	           					<input type="email" name="PersonalEmail" class="form-control" placeholder="PersonalEmail" data-ng-model="employee.PersonalEmail">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="CompanyEmail">CompanyEmail</label>
+	           				<div>
+	           					<input type="email" name="CompanyEmail" class="form-control" placeholder="CompanyEmail" data-ng-model="employee.CompanyEmail">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="TaxNumber">TaxNumber</label>
+	           				<div>
+	           					<input type="text" name="TaxNumber" class="form-control" placeholder="TaxNumber" data-ng-model="employee.TaxNumber">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="SkypeID">SkypeID</label>
+	           				<div>
+	           					<input type="text" name="SkypeID" class="form-control" placeholder="SkypeID" data-ng-model="employee.SkypeID">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="SocialInsuranceCode">SocialInsuranceCode</label>
+	           				<div>
+	           					<input type="text" name="SocialInsuranceCode" class="form-control" placeholder="SocialInsuranceCode" data-ng-model="employee.SocialInsuranceCode">
+	           				</div>
+	           			</div>
+	           			<div class="form-group">
+	           				<label for="SocialInsurancePlace">SocialInsurancePlace</label>
+	           				<div>
+	           					<input type="text" name="SocialInsurancePlace" class="form-control" placeholder="SocialInsurancePlace" data-ng-model="employee.SocialInsurancePlace">
+	           				</div>
+	           			</div>
+	           		</div>
+
+           			<!--Start: Submit button-->
+           			<div class="form-group box-footer col-md-12">
+           				<div class="controls text-right">
+           					<a class="btn btn-primary btn-flat" data-ng-click="gotoSearch()">
+                                Cancel
+                            </a>
+           					<button type="submit" class="btn btn-success btn-flat">
+           						Update
+           					</button>
+           				</div>
+           			</div>
+					<!--End: Submit button-->
+           		</form>
+            </div>
+        </div>
+    </div>
+</div>
