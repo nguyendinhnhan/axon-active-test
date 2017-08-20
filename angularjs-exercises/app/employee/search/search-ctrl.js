@@ -7,7 +7,7 @@ angular.module('myApp')
         $scope.query = '';
         $scope.employees = [];
 
-        $scope.findAll = function() {  
+        $scope.findAll = function() {
             employeeService
                 .getAll()
                 .then(function(allEmployees) {
@@ -16,11 +16,11 @@ angular.module('myApp')
         }
 
         $scope.edit = function(id) {
-            $location.path('/employeeEdit/'+id);
+            $location.path('/employeeEdit/' + id);
         }
 
         $scope.delete = function(id) {
-        	if (confirm('Are you sure!')) {
+            if (confirm('Are you sure!')) {
                 employeeService
                     .delete(id)
                     .then(function(employees) {

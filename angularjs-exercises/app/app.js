@@ -4,8 +4,7 @@
 angular.module('myApp', [
   'ngRoute', 
   'ui.bootstrap',
-  'ui.bootstrap.datetimepicker',
-  'ngMessages'
+  'ui.bootstrap.datetimepicker'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

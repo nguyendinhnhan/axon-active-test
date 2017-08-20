@@ -28,12 +28,20 @@ describe('myApp', function () {
 
         // Write unit test for Update function. Fix employeeService if you find bugs
         it('should be update an employee correctly', function () {
-            expect(1).toEqual(1); // remove this line after you modify this unit test           
+            var employee = {
+                ID: '13c05ca8-bb90-4444-ac2d-eb97cd9b5123',
+                GivenName: 'test'
+            }
+            employeeService.update(employee).then(function(emp) {
+                expect(emp.GivenName).toEqual('test');
+            });
         });
 
         // Write unit test for Delete function. Fix employeeService if you find bugs
         it('should be delete an employee correctly', function () {
-            expect(1).toEqual(1); // remove this line after you modify this unit test           
+            employeeService.delete('13c05ca8-bb90-4444-ac2d-eb97cd9b5123').then(function(employees) {
+                expect(employees.length).toEqual(1);
+            });           
         });
     });
 });

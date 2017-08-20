@@ -4,7 +4,7 @@ angular.module('myApp')
     .service('employeeService', ['$q', function ($q) {
         var mockData = [];
 
-        var employee1 = new EmployeeViewModel();
+        var employee1 = {};
         employee1.ID = '13c05ca8-bb90-4444-ac2d-eb97cd9b5abc';
         employee1.GivenName = 'Nhan';
         employee1.FamilyName = 'Nguyen Nhan';
@@ -24,7 +24,7 @@ angular.module('myApp')
         employee1.SocialInsuranceCode = '9988776655';
         employee1.SocialInsurancePlace = '1111122222';
 
-        var employee2 = new EmployeeViewModel();
+        var employee2 = {};
         employee2.ID = '13c05ca8-bb90-4444-ac2d-eb97cd9b5123';
         employee2.GivenName = 'Quang';
         employee2.FamilyName = 'Nguyen';

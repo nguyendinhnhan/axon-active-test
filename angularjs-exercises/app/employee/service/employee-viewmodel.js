@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 function EmployeeViewModel() {
     this.ID = '';
     this.GivenName = '';
@@ -20,3 +20,4 @@ function EmployeeViewModel() {
     this.SocialInsuranceCode = '';
     this.SocialInsurancePlace = '';
 }
+*/

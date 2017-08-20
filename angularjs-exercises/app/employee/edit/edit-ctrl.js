@@ -12,8 +12,8 @@ angular.module('myApp')
         }
 
         $scope.update = function(isValid) {
-            $scope
             if (!isValid) return;
+            
             employeeService
                 .update($scope.employee)
                 .then(function() {
